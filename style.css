@@ -1,0 +1,41 @@
+
+.navbar-brand img{
+ max-width: 100px;
+}
+.single-item-image{
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+}
+.items-image img{
+    transition: all.3s;
+}
+.items-image:hover img{
+    filter:brightness(80%);
+}
+#uperArrow img{
+    -ms-transform: rotate(180deg); 
+    -webkit-transform: rotate(180deg);  
+    transform: rotate(180deg); 
+}
+
+.form_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.centered_form{
+    width: 65%;
+    height: 45%;
+    background: lightgrey;
+    border-radius: 15px;
+    padding: 20px;
+}
+.homepage{
+    display: none;
+}
+#warning{
+    display: none;
+}
