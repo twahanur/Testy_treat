@@ -39,3 +39,9 @@
 #warning{
     display: none;
 }
+.form_image{
+    height: 20vh;
+}
+.cbody_color{
+    background: lightcoral;
+}

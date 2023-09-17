@@ -4,10 +4,8 @@ document.getElementById('loginForm').addEventListener('submit', function (gettin
 
     const loginemail = document.getElementById('inputEmail3').value
     const loginpass = document.getElementById('inputPassword3').value
-    const gridRadios1 = document.getElementById('gridRadios1').value;
-    const gridRadios2 = document.getElementById('gridRadios2').value;
-    const gridRadios3 = document.getElementById('gridRadios3').value;
-    if (loginemail === "jannatul@gmail.com" && loginpass === "123456") {
+    if ((loginemail === "demo@gmail.com" && loginpass === "demo") || (loginemail === "admin@gmail.com" && loginpass === "admin")) {
+        console.log("Logged in")
         const showHome = document.getElementById('homepage');
         const hideForm = document.getElementById('form_section');
         showHome.style.display = "block";
@@ -121,21 +119,22 @@ const displayDetails = foods => {
         const foodDetails = `
         <div class="card w-100">
             <div class="row g-0">
+           
                 <div class="col-md-6">
                     <img src="${food.strMealThumb}" class="card-img-top single-item-image" alt="...">
                 </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <h3 class="card-title">${food.strMeal} <span><button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button></span></h3>
-                        <h5 class="card-title">Ingredients</h5>
-                        <ul class="list-unstyled">
-                            ${ingredientList(food)}
-                        </ul>
-                    </div>
+                 <div class="col-md-6">
+                <div class="card-body">
+                    <h3 class="card-title">${food.strMeal} <span><button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button></span></h3>
+                    <h5 class="card-title">Ingredients</h5>
+                    <ul class="list-unstyled">
+                        ${ingredientList(food)}
+                    </ul>
                 </div>
             </div>
+            </div>
             <div class="ms-auto text-success"><h3>$${amount}</h3></div>
-            <button class="btn-warning btn" onclick="orderConfirm()" >Order Now</button>
+            <button class="btn-primary btn" onclick="orderConfirm()" >Order Now</button>
         </div>
         `
         modalBody.innerHTML = foodDetails
